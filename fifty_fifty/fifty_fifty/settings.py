@@ -37,7 +37,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
     'webcore',
+    'crispy_forms',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
 ]
 
 MIDDLEWARE = [
@@ -67,6 +72,17 @@ TEMPLATES = [
         },
     },
 ]
+
+#django-allauth authentication backend
+AUTHENTICATION_BACKENDS = (
+
+    # Needed to login by username in Django admin, regardless of `allauth`
+    'django.contrib.auth.backends.ModelBackend',
+
+    # `allauth` specific authentication methods, such as login by e-mail
+    'allauth.account.auth_backends.AuthenticationBackend',
+
+)
 
 WSGI_APPLICATION = 'fifty_fifty.wsgi.application'
 
@@ -128,3 +144,9 @@ if DEBUG:
     STATICFILES_DIRS = [
     os.path.join(os.path.dirname(BASE_DIR), "static", "static"),
 ]
+
+#django-crispy
+CRISPY_TEMPLATE_PACK = 'bootstrap3'
+
+#django-allauth
+SITE_ID = 1
