@@ -7,7 +7,7 @@
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">Fifty50 Mentoring</a>
+                <a class="navbar-brand page-scroll" href="{% url 'home' %}">Fifty50 Mentoring</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -23,10 +23,10 @@
                         <a class="page-scroll" href="#contact">Contact Us</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#login">Login</a>       <!-- login -->
+                        <a class="page-scroll" href="{% url 'account_login' %}">Login</a>       <!-- login -->
                     </li>
                     <li>
-                        <a class="page-scroll" href="#signup">Sign Up</a>       <!-- signup -->
+                        <a class="page-scroll" href="{% url 'account_signup' %}">Sign Up</a>       <!-- signup -->
                     </li>
                 </ul>
             </div>

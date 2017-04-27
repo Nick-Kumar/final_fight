@@ -8,7 +8,7 @@
                 <img src={% static "img/Fifty50Header.png" %} style="max-height:250px;width:auto;"></img>
                 <hr>
                 <p>Learn to learn, make friends, and build a support network!</p>
-                <a href="#signup" class="btn btn-primary btn-xl page-scroll">Join Us Today</a> <!-- link to signup page here -->
+                <a href="{% url 'account_signup' %}" class="btn btn-primary btn-xl page-scroll">Join Us Today</a> <!-- link to signup page here -->
             </div>
         </div>
     </header>
@@ -20,8 +20,8 @@
                     <h2 class="section-heading" style="color:#000">Should you join us?</h2>
                     <hr>
                     <img class="signupflowchart" src={% static "img/SignUpFlowchartDiagram.png" %}></img>
-                    <a href="#signup" class="btn btn-primary btn-xl sr-button"><span style="color:#111;">Sign up to be a</span> mentee!</a>
-                    <a href="#signup" class="btn btn-primary btn-xl sr-button"><span style="color:#111;">Sign up to be a</span> mentor!</a>
+                    <a href="{% url 'account_signup' %}" class="btn btn-primary btn-xl sr-button"><span style="color:#111;">Sign up to be a</span> mentee!</a>
+                    <a href="{% url 'account_signup' %}" class="btn btn-primary btn-xl sr-button"><span style="color:#111;">Sign up to be a</span> mentor!</a>
                 </div>
             </div>
         </div>
