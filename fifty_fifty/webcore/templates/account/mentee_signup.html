@@ -14,11 +14,6 @@
 
 <p>{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
 
-<p>{% blocktrans %}Would you like to register as a{% endblocktrans %}</p>
-
-<p>{% blocktrans %}Mentee {% endblocktrans %}<input type="radio" onclick="javascript:teetorCheck();" name="mm" id="teeCheck"/>
-{% blocktrans %}&nbsp;&nbsp;&nbsp;&nbsp;Mentor {% endblocktrans %}<input type="radio" onclick="javascript:teetorCheck();" name="mm" id="torCheck"/></p>
-
 <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
   {% csrf_token %}
   {{ form.first_name|as_crispy_field }}
@@ -29,14 +24,10 @@
   {{ form.degree_major|as_crispy_field }}
   {{ form.gender|as_crispy_field }}
   {{ form.mentor_gender|as_crispy_field }}
-</div>
-  <div id="ifYes" style="display:none"  class= 'col-md-4 col-md-offset-4' >
   {{ form.why_mentor|as_crispy_field }}
   {{ form.why_div_equ_inc|as_crispy_field }}
   {{ form.mentee_number|as_crispy_field }}
   {{ form.hear_about|as_crispy_field }}
-  </div>
-  <div class= 'col-md-4 col-md-offset-4' >
   {{ form.email|as_crispy_field }}
   {{ form.password1|as_crispy_field }}
   {{ form.password2|as_crispy_field }}
@@ -47,15 +38,4 @@
   <button type="submit" class="btn btn-primary btn-xl sr-button">{% trans "Sign Up" %} &raquo;</button>
 </form>
 </div>
-
-<script type="text/javascript">
-
-function teetorCheck() {
-    if (document.getElementById('teeCheck').checked) {
-        document.getElementById('ifYes').style.display = 'none';
-    } else {
-        document.getElementById('ifYes').style.display = 'block';
-    }
-  }
-</script>
 {% endblock %}
