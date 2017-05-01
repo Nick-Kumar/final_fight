@@ -24,6 +24,7 @@ urlpatterns = [
     url(r'^$', views.home, name='home'),
     url(r'^profile/$', views.userProfile, name='profile'),
     url(r'^accounts/', include('allauth.urls')),
+    url(r'^news/', include('news.urls')),
 ]
 
 if settings.DEBUG:

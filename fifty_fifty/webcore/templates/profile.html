@@ -22,16 +22,13 @@
                     <h2 class="section-heading" style="color:#000">Latest News and Events</h2>
                     <hr>
                     <h3> Example News post...</h3>
-                    <p> Lorem ipsum dolor sit amet, graece quaestio sapientem te mei. Ad justo munere consectetuer quo, eirmod eripuit quo ei. Vel ullum omnium ocurreret no, ut sit graece melius lobortis, cu docendi contentiones has. No sea odio nusquam. Ei dico erat repudiandae eum, laoreet recusabo est ea, nec agam illum ridens at. Ignota delicata indoctum vim ea.
-
-Et cetero fabulas pri. Eam an cetero sapientem salutatus, vim eu malis tibique delicatissimi. Ex oporteat complectitur vim. Et cum nisl facilis complectitur, sit sanctus habemus theophrastus in... </p>
-                    <a href="#signup" class="btn btn-primary btn-xl sr-button"><span style="color:#111;">Click here to read more!</a>
-                                            <hr>
-                    <h3> Example News post 2...</h3>
-                    <p> Lorem ipsum dolor sit amet, graece quaestio sapientem te mei. Ad justo munere consectetuer quo, eirmod eripuit quo ei. Vel ullum omnium ocurreret no, ut sit graece melius lobortis, cu docendi contentiones has. No sea odio nusquam. Ei dico erat repudiandae eum, laoreet recusabo est ea, nec agam illum ridens at. Ignota delicata indoctum vim ea.
-
-Et cetero fabulas pri. Eam an cetero sapientem salutatus, vim eu malis tibique delicatissimi. Ex oporteat complectitur vim. Et cum nisl facilis complectitur, sit sanctus habemus theophrastus in... </p>
-                    <a href="#signup" class="btn btn-primary btn-xl sr-button"><span style="color:#111;">Click here to read more!</a>
+                    <p> {% for post in posts %}
+                              <div>
+                                    <p>published: {{ post.published_date }}</p>
+                                    <h1><a href="">{{ post.title }}</a></h1>
+                                    <p>{{ post.text|linebreaksbr }}</p>
+                              </div>
+                              {% endfor %}</p>
 
                 </div>
             </div>
