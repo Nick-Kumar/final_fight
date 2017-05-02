@@ -21,8 +21,8 @@
                 <div class="col-sm-12 text-center">
                     <h2 class="section-heading" style="color:#000">Latest News and Events</h2>
                     <hr>
-                    <h3> Example News post...</h3>
-                    <p> {% for post in posts %}
+                    <h3> Example News post...</h3>[[ {{ request.GET }}]]  HERE!!!
+                    <p>{% for post in posts %}
                               <div>
                                     <p>published: {{ post.published_date }}</p>
                                     <h1><a href="">{{ post.title }}</a></h1>
